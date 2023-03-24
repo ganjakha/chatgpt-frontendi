@@ -1,0 +1,66 @@
+h1{
+    
+    font-family: sans-serif;
+}
+
+.title-heading{
+    margin: 4.5rem auto;
+    text-align: center;
+}
+
+.navbar-brand{
+	margin: 10px auto;
+	text-align: center;
+}
+
+#chat-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left:7rem;
+    margin-right: 4rem;
+}
+#chat-form label {
+    font-weight: bold;
+}
+
+#chat-form textarea {
+    flex-grow: 1;
+    font-size: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+#chat-form button {
+    font-size: inherit;
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#response {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 3rem;
+    margin-bottom: 2rem;
+}
+#response p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+button[name="switchLayout"]{
+    text-align: center;
+    display: block;
+    margin: 3rem auto;
+}
+
+/* .response-text{
+    min-height: 30rem;
+} */
+

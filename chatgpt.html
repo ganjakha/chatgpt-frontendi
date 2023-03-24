@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChatGPT | @rootCircle</title>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="chatgpt.css">
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand navbar-dark bg-danger">
+                <div class="nav navbar-nav">
+                    <h1 class="navbar-brand">ChatGPT
+                        Corner</h1>
+                </div>
+            </nav>
+        </header>
+
+        <h1 class="title-heading">UnCensored CHATGPT</h1>
+        <form action="#" id="chat-form" method="post">
+            <!-- <textarea type="text" id="prompt-input"> -->
+            <textarea name="" id="prompt-input"></textarea>
+            <input type="checkbox" name="context" id="context" checked>
+            <label for="context">Reply in context</label>
+            <button type="submit" name="sendRequest"
+                onclick="handleRequest(event)">Send Request</button>
+
+        </form>
+
+        <div id="response">
+            <pre style="white-space: pre;">
+        <code class="response-text">
+
+    This is free and unencumbered software released into the public domain.
+
+    Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+
+    In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+    For more information, please refer to http://unlicense.org/
+
+        </code>
+    </pre>
+        </div>
+
+        <button class = "btn btn-success btn-lg" name="switchLayout"
+                onclick="toggleLayout()">Switch Response Layout</button>
+
+        <script src="chatgpt_config.js"></script>
+        <script>
+        async function handleRequest(event) {
+            event.preventDefault();
+            var resp = document.querySelector(".response-text");
+            resp.textContent = "Loading....Please be patient";
+            const prompt = document.getElementById('prompt-input').value;
+            const response = await generateResponse(prompt);
+            resp.innerHTML="";
+            resp.textContent=response;
+        }
+    </script>
+        <script src="chatgpt.js"></script>
+
+    </body>
+</html>
